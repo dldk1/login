@@ -32,23 +32,23 @@ public class ControllerServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-		String url = request.getRequestURL().toString();		
+		String url = request.getRequestURL().toString();
 
 		String[] sub = url.split("/");
-	
+
 		String suburl = sub[4];
-		
+
 		// String suburl2 = sub2[0];
 		// System.out.println(suburl);
 		// System.out.println(suburl2);
 		String site = null;
+		System.out.println(suburl);
 		switch (suburl) {
 		case "login.devil":
 			// response.getWriter().append("login page");
 			site = "lion/login.jsp";
 			System.out.println("로그인");
 			break;
-			
 		case "login_proc.devil":
 			site = "LoginProc";
 			System.out.println("로그인처리");
@@ -60,8 +60,20 @@ public class ControllerServlet extends HttpServlet {
 			site = "JoinUsProc";
 			break;
 		case "main.devil":
-			site = "main/index.jsp";
+			site = "main/main.jsp";
 			break;
+		case "admin.devil":
+			// response.getWriter().append("only admin page");
+			site = "AdminServlet";
+			// site = "admin/admin.jsp";
+			break;
+		case "logout.devil":
+			site = "LogoutServlet"; // 로그아웃
+			break;
+		case "emailCheck.devil":
+			site = "EmailCheckServlet";
+			System.out.println(site);
+			break;			
 		default:
 			response.getWriter().append("error page");
 			break;

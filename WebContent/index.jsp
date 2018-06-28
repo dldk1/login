@@ -14,7 +14,8 @@
 	
 	<script type="text/javascript">
 	//location.href="<%=path%>/join_us.devil";	
-	location.href="<%=path%>/login.devil";	
+	//location.href="<%=path%>/login.devil";	
+	location.href="<%=path%>/main.devil";	
 	
 	//location.href="${pageContext.request.contextPath}/login.devil";
 	</script>

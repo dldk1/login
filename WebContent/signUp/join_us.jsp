@@ -33,7 +33,8 @@
 					type="password" />
 			</div>
 		</div>
-		<a class="form-action"><i class="icon-action"></i></a>
+		<a class="form-action"><i class="icon-action"></i></a> <span
+			id="err-text">여기에 에러출력</span>
 	</form>
 </body>
 <script src="<%=path%>/signUp/script.js"></script>
@@ -92,8 +93,10 @@
 			console.log("data : " + data);
 			if (status.trim() == "success" && data.trim() == "OK") {
 				console.log("데이터 저장 성공");
+				location.href="<%=path%>/login.devil"
 			} else {
 				console.log("데이터 저장 실패");
+				alert("가입에 실패하였습니다. \n시스템 관리자에게 문의바랍니다.");
 			}
 			//alert("Data: " + data + "\nStatus: " + status);
 		});

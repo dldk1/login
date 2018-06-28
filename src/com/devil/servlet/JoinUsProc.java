@@ -51,7 +51,7 @@ public class JoinUsProc extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		try {
-			UserDAO.InsertUser(uvo);
+			UserDAO.insertUser(uvo);
 			out.println("OK");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
